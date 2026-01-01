@@ -8,7 +8,7 @@ let randomNum3;
 
 
 function getComputerChoice(){
-    randomNum1 = Math.random();
+    randomNum1 = Math.floor(Math.random() * 3) + 1;
     hand1.textContent = randomNum1;
 }
 
@@ -16,3 +16,4 @@ myButton.onclick = getComputerChoice
 
 
 
+    
