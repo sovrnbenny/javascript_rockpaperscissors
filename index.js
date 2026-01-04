@@ -5,8 +5,6 @@ let randomNum1;
 let randomHand;
 
 
-
-
 function getComputerChoice(){
     randomNum1 = Math.floor(Math.random() * 3) + 1;
 
@@ -19,18 +17,15 @@ function getComputerChoice(){
         else{computerHand.textContent = "scissors";
         }
 }
-myButton.onclick = getComputerChoice
 
 function getHumanChoice(){
     
     randomHand = prompt("Choose rock, paper, or scissors");
     humanHand.textContent = randomHand
-
-
 }
 
-myButton.onclick = getHumanChoice
+myButton.onclick = function() {
+    getComputerChoice();
+    getHumanChoice();
+} 
 
-
-
-    
